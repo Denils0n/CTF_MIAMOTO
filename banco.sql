@@ -34,10 +34,7 @@ INSERT INTO Pecas (nome, descricao, imagem, ficha) VALUES
 ('Bateria de Moto', 'Bateria de alta capacidade para partida confiável em qualquer situação.', 'imagens/bateria_moto.jpg', 'ficha/teste.txt');
 
 INSERT INTO Users (usuario, senha, cargo) VALUES
-('joaosilva', 'senha123', 'Gerente de Vendas'),
-('mariaoliveira', 'senha456', 'Engenheira de Produto'),
-('lucassantos', 'senha789', 'Especialista em Marketing'),
-('anacosta', 'senhaabc', 'Desenvolvedora de Novas Tecnologias'),
+
 ('mariasilva', 'senha321', 'Analista de Qualidade'),
 ('pedroalmeida', 'senha654', 'Designer Industrial'),
 ('lucasrodrigues', 'senha987', 'Analista de Marketing Digital'),

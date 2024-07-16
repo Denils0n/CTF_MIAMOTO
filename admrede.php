@@ -64,7 +64,7 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica se o nome de usuário e senha estão corretos (isso pode ser feito de maneira mais segura com um sistema de autenticação real)
             $usuario_correto = "enzon";
-            $senha_correta = "enzoomaiordarede";
+            $senha_correta = "iloveyou";
 
             if ($_POST["usuario"] == $usuario_correto && $_POST["senha"] == $senha_correta) {
                 // Se o nome de usuário e senha estiverem corretos, exiba as informações da rede

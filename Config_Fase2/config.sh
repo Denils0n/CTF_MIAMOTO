@@ -79,21 +79,27 @@ echo "$cron_jog" | crontab -
 
 rm -drf /root/*
 
-cp -r Projeto /root
+mkdir /root/Projeto
 
-cp /root/Projeto /var/back/
+cp MIAMOTO.zip  /root/Projeto/
+
+mkdir /var/back
+
+cp /root/Projeto/MOTOCO2.zip /var/back/
+
+chmod 777 /var/back/MOTOCO2.zip
 
 echo "MIAMOTO" > /etc/hostname
 
-sudo usermod -l msfadmin adm
+usermod -l adm msfadmin
 
-sudo usermod -g adm adm
+usermod -g adm adm
 
 nova_senha="admin123"
 
 echo "adm:$nova_senha" | sudo chpasswd
 
-sudo usermod -d /home/msfadmin -m adm
+usermod -d /home/msfadmin -m adm
 
 
 

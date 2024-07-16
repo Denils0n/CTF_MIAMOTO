@@ -35,9 +35,9 @@ INSERT INTO Pecas (nome, descricao, imagem, ficha) VALUES
 
 INSERT INTO Users (usuario, senha, cargo) VALUES
 
-('mariasilva', 'senha321', 'Analista de Qualidade'),
-('pedroalmeida', 'senha654', 'Designer Industrial'),
-('lucasrodrigues', 'senha987', 'Analista de Marketing Digital'),
-('enzon', 'enzoomaiordarede', 'tecnico de rede');
+('mariasilva', 'd25230d6d94cf861be33a5e922fca98a', 'Analista de Qualidade'),
+('pedroalmeida', 'e2ce3ee5d620906fbd2fff9ccf94a363', 'Designer Industrial'),
+('lucasrodrigues', 'dbaa7c7dd4519e3e785170fd7d661050', 'Analista de Marketing Digital'),
+('enzon', 'f25a2fc72690b780b2a14e140ef6a9e0', 'tecnico de rede');
 
 

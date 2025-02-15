@@ -9,37 +9,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos em Destaque - Empresa XYZ</title>
-  <!-- Inclua os arquivos CSS do Material Design Lite -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-lite@1.3.0/material.min.css">
-  <!-- Inclua os arquivos JavaScript do Material Design Lite -->
-  <script src="https://cdn.jsdelivr.net/npm/material-design-lite@1.3.0/material.min.js"></script>
-  <!-- Inclua o arquivo CSS personalizado -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peças - Meu Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="mdl-demo mdl-base">
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Título do site -->
-      <span class="mdl-layout-title">Empresa XYZ - Produtos em Destaque</span>
-      <!-- Adicione navegação aqui -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="index.php">Início</a>
-        <a class="mdl-navigation__link" href="pecas.php">Peças</a>
-        <a class="mdl-navigation__link" href="sobre.html">Sobre Nós</a>
-        <a class="mdl-navigation__link" href="contatos.html">Contato</a>
-      </nav>
-      <!-- Botão de alternância para modo escuro -->
-      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="dark-mode-switch">
-        <input type="checkbox" id="dark-mode-switch" class="mdl-switch__input" onchange="toggleDarkMode()">
-        <span class="mdl-switch__label">Modo Escuro</span>
-      </label>
-    </div>
-  </header>
+<header>
+        <nav>
+            <ul>
+                <li><a href="index.php">Início</a></li>
+                <li><a href="pecas.php">Peças</a></li>
+                <li><a href="sobre.php">Sobre Nós</a></li>
+                <li><a href="contato.php">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <main class="mdl-layout__content">
     <div class="mdl-layout__tab-panel is-active" id="overview">
@@ -83,28 +70,11 @@
       </section>
     </div>
   </main>
-  <a href=""></a>
-
-  <footer class="mdl-mini-footer">
-    <!-- Rodapé aqui -->
-    <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo">Empresa XYZ - Produtos em Destaque</div>
-      <ul class="mdl-mini-footer__link-list">
-        <li><a href="index.php">Início</a></li>
-        <li><a href="pecas.php">Peças</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="contatos.html">Contato</a></li>
-      </ul>
-    </div>
+  <footer>
+      <p>&copy; 2025 Meu Site</p>
   </footer>
 </div>
 
-<script>
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-  }
-</script>
 
 </body>
 </html>

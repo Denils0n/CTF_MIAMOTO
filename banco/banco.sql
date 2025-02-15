@@ -1,4 +1,4 @@
-create database miamoto;
+
 use miamoto;
 
 CREATE TABLE Pecas (

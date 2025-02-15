@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início - Meu Site</title>
+    <title>Contato - Meu Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +18,16 @@
         </nav>
     </header>
     <main>
-        <h1>Bem-vindo ao nosso site!</h1>
-        <p>Aqui você encontra as melhores informações sobre nossas peças, nossa empresa e como nos contatar.</p>
+        <h1>Contato</h1>
+        <p>Informações de contato.</p>
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações ou dúvidas:</p>
+        <ul>
+            <li><strong>Telefone:</strong> (00) 1234-5678</li>
+            <li><strong>Email:</strong> contato@empresaxyz.com</li>
+            <li><strong>Endereço:</strong> Rua das Peças, 123 - Cidade ABC</li>
+        </ul>
+    
     </main>
     <footer>
         <p>&copy; 2025 Meu Site</p>

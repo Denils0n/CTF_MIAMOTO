@@ -18,8 +18,11 @@
         </nav>
     </header>
     <main>
-        <h1>Bem-vindo ao nosso site!</h1>
-        <p>Aqui você encontra as melhores informações sobre nossas peças, nossa empresa e como nos contatar.</p>
+        <section>
+            <h1>Bem-vindo ao nosso site!</h1>
+            <p>Aqui você encontra as melhores informações sobre nossas peças, nossa empresa e como nos contatar.</p>
+        </section>
+
     </main>
     <footer>
         <p>&copy; 2025 Meu Site</p>

@@ -41,7 +41,7 @@ echo "Installation complete"
 # Solicitar usuário e senha
 read -p "Digite o usuário do MySQL: " USUARIO
 read -sp "Digite a senha do MySQL: " SENHA
-BANCO_DE_DADOS=MIAMOTO
+BANCO_DE_DADOS=miamoto
 
 
 # Criar usuário no MySQL

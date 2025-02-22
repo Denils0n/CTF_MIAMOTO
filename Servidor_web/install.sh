@@ -1,27 +1,60 @@
 #!/bin/bash
-echo "Installing Apache2, PHP and MySQL"
 
-sudo apt update
+# Verificar e instalar Apache2
+if apache2 -v > /dev/null 2>&1
+then
+    echo "Apache2 já está instalado"
+else
+    echo "Instalando Apache2"
+    sudo apt-get install apache2 -y
+fi
 
-sudo apt install -y apache2
+# Verificar e instalar MySQL
+if mysql -V > /dev/null 2>&1
+then
+    echo "MySQL já está instalado"
+else
+    echo "Instalando MySQL"
+    sudo apt-get install mysql-server -y
+fi
 
-sudo apt install -y php
+# Verificar e instalar PHP
+if php -v > /dev/null 2>&1
+then
+    echo "PHP já está instalado"
+else
+    echo "Instalando PHP"
+    sudo apt-get install php libapache2-mod-php php-mysql -y
+fi
 
-sudo apt install -y php-mysql
-
-sudo apt install -y mysql-client
-
-sudo apt install -y mysql-server
+# Verificar e instalar Git
+if git --version > /dev/null 2>&1
+then
+    echo "Git já está instalado"
+else
+    echo "Instalando Git"
+    sudo apt-get install git -y
+fi
 
 echo "Installation complete"
 
 # Solicitar usuário e senha
 read -p "Digite o usuário do MySQL: " USUARIO
 read -sp "Digite a senha do MySQL: " SENHA
-echo
+BANCO_DE_DADOS=MIAMOTO
+
+
+# Criar usuário no MySQL
+sudo mysql <<EOF
+CREATE USER '$USUARIO'@'localhost' IDENTIFIED BY '$SENHA';
+GRANT ALL PRIVILEGES ON $BANCO_DE_DADOS.* TO '$USUARIO'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EOF
+
+echo 
+
 
 # Defina as variáveis do banco de dados e caminho do arquivo
-BANCO_DE_DADOS="miamoto"
 CAMINHO_ARQUIVO="./banco/banco.sql"
 
 # Crie o banco de dados (se ainda não existir)

@@ -22,13 +22,18 @@
         <p>Lista de peças disponíveis.</p>
         <?php
 
-          include("conecBanco.php");
+          include("conexao.php");
 
           // Consulta SQL para obter as peças
           $consulta = "SELECT * FROM Pecas";
 
           // Executa a consulta
-          $resultado = mysqli_query($mysql, $consulta);
+          //testar conexão 
+            if ($db_connection->connect_error) {
+                die("Connection failed: " . $db_connection->connect_error);
+            }
+
+          $resultado = mysqli_query($db_connection, $consulta);
 
           // Loop para exibir as peças
           while ($linha = mysqli_fetch_assoc($resultado)) {

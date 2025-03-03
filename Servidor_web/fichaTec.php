@@ -35,13 +35,13 @@
         <h2 class="mdl-cell mdl-cell--12-col">Produtos em Destaque</h2>
         <!-- Lista de produtos em destaque -->
         <?php 
-            include("conecBanco.php");
+            include("conexao.php");
     
             $id = $_GET['id'];
         
             $consulta = "SELECT * FROM Pecas WHERE id = $id";
         
-            $resultado = mysqli_query($mysql, $consulta);
+            $resultado = mysqli_query($db_connection, $consulta);
         
             // Verifica se há registros retornados
             if (mysqli_num_rows($resultado) > 0) {

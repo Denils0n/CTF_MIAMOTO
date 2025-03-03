@@ -1,7 +1,5 @@
 
-use miamoto;
-
-CREATE TABLE Pecas (
+CREATE TABLE IF NOT EXISTS Pecas (
     
     id INT AUTO_INCREMENT PRIMARY KEY,
     
@@ -15,15 +13,13 @@ CREATE TABLE Pecas (
 
 );
 
-CREATE TABLE Users (
+CREATE TABLE IF NOT EXISTS Usuario (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
     
-    usuario VARCHAR(25) NOT NULL,
+    nome VARCHAR(25) NOT NULL,
     
-    senha VARCHAR(32) NOT NULL,
-    
-    cargo VARCHAR(255) NOT NULL
+    senha VARCHAR(255) NOT NULL 
 );
 
 INSERT INTO Pecas (nome, descricao, imagem, ficha) VALUES 
@@ -33,11 +29,5 @@ INSERT INTO Pecas (nome, descricao, imagem, ficha) VALUES
 ('Corrente de Transmissão', 'Corrente de transmissão durável e confiável para motos.', 'imagens/corrente_transmissao.jpg', 'ficha/teste.txt'),
 ('Bateria de Moto', 'Bateria de alta capacidade para partida confiável em qualquer situação.', 'imagens/bateria_moto.jpg', 'ficha/teste.txt');
 
-INSERT INTO Users (usuario, senha, cargo) VALUES
-
-('mariasilva', 'd25230d6d94cf861be33a5e922fca98a', 'Analista de Qualidade'),
-('pedroalmeida', 'e2ce3ee5d620906fbd2fff9ccf94a363', 'Designer Industrial'),
-('lucasrodrigues', 'dbaa7c7dd4519e3e785170fd7d661050', 'Analista de Marketing Digital'),
-('enzon', 'f25a2fc72690b780b2a14e140ef6a9e0', 'tecnico de rede');
 
 

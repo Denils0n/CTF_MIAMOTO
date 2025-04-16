@@ -77,55 +77,9 @@ Cada servidor possui um arquivo secreto com uma frase criptografada. A frase per
 
 ---
 
-## Planejamento Scrum
-
-### Sprint 1 (Semana 1)
-- [ ] Definir o ambiente de desenvolvimento (máquinas virtuais Linux).
-- [ ] Configurar os servidores (Web, Local, Arquivo).
-- [ ] Criar arquivos secretos e definir algoritmos de criptografia.
-
-### Sprint 2 (Semana 2)
-- [ ] Implementar vulnerabilidades nos servidores.
-- [ ] Documentar as vulnerabilidades e seus impactos.
-
-### Sprint 3 (Semana 3)
-- [ ] Criar scripts para defesa do ambiente.
-- [ ] Testar as defesas implementadas.
-
-### Sprint 4 (Semana 4)
-- [ ] Criar scripts para ataque aos ambientes adversários.
-- [ ] Testar os ataques em ambientes controlados.
-
-### Sprint 5 (Semana 5)
-- [ ] Avaliar o ambiente de cada equipe.
-- [ ] Documentar as estratégias de defesa e ataque.
-
-### Sprints Finais (Semanas 6-20)
-- [ ] Refinar o ambiente e corrigir problemas.
-- [ ] Realizar testes completos do desafio.
-- [ ] Preparar a apresentação final.
-
----
-
 ## Ferramentas Necessárias
 - 3 Máquinas Virtuais Linux
 - Servidores configurados com os serviços descritos
-- Scripts para defesa e ataque
 - Algoritmos de criptografia simples para os arquivos secretos
 
----
 
-## Entregas Semanais
-- **Semana 1**: Ambiente configurado e arquivos secretos criados.
-- **Semana 2**: Vulnerabilidades implementadas e documentadas.
-- **Semana 3**: Estratégias de defesa testadas.
-- **Semana 4**: Estratégias de ataque testadas.
-- **Semana 5**: Avaliação inicial do ambiente.
-- **Semanas 6-20**: Refinamento, testes e apresentação final.
-
----
-
-## Avaliação
-- Defesa do ambiente: 40%
-- Ataque aos ambientes adversários: 40%
-- Conformidade com as regras: 20%

@@ -45,9 +45,8 @@ Uma empresa de venda de peças para motos está desenvolvendo um novo motor movi
 
 ### Vulnerabilidades
 #### Servidor Web
-- PHP: WebShell, SQL Injection
+- PHP: WebShell, SQL Injection, Usuário e senha fracos, Shell reverso
 - SQL: Arquivo de configuração exposto
-- Wordpress: Usuário e senha fracos, Shell reverso
 - Repositório: Dados sensíveis expostos
 
 #### Servidor Local

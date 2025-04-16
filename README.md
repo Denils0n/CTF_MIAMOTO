@@ -39,7 +39,7 @@ Uma empresa de venda de peças para motos está desenvolvendo um novo motor movi
 
 ## Infraestrutura
 ### Servidores e Serviços
-- **Servidor Web**: PHP, SQL, Wordpress
+- **Servidor Web**: PHP, SQL
 - **Servidor Local**: SSH, Telnet, Rotina de cópia de projeto
 - **Servidor de Arquivo**: FTP, Rotina de backups
 

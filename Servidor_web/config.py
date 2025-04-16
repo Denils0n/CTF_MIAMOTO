@@ -32,19 +32,6 @@ TB_PASSWORD = TB_PASSWORD_STR.split(",")
 CP_TIPO= os.getenv("CP_TIPO")
 CP_SALT= os.getenv("CP_SALT")
 
-# WORDPRESS
-
-WP_DATABASE_NAME= os.getenv("WP_DATABASE_NAME")
-WP_USER= os.getenv("WP_USER")
-WP_PASSWORD= os.getenv("WP_PASSWORD")
-WP_URL= os.getenv("WP_URL")
-WP_ADM_NAME= os.getenv("WP_ADM_NAME")
-WP_ADM_PASSWORD= os.getenv("WP_ADM_PASSWORD")
-WP_ADM_EMAIL= os.getenv("WP_ADM_EMAIL")
-WP_TITULO= os.getenv("WP_TITULO")
-WP_URL_SITE= os.getenv("WP_URL_SITE")
-
-
 
 # Arquivo ponto cap 
 
@@ -112,41 +99,6 @@ for i in range(int(TB_QUANTIDADE)):
         senha = criar_hash(senha)  
         run_command(f"mysql -u {DB_USERNAME} -p{DB_PASSWORD} {DB_DATABASE} -e 'INSERT INTO Usuario (nome, senha) VALUES (\"{nome}\", \"{senha}\")'")
 
-
-
-#configurar wordpress
-
-run_command('sudo apt install wget -y')
-
-run_command(f"mysql -u {WP_USER} -p{WP_PASSWORD} -e 'CREATE DATABASE IF NOT EXISTS {WP_DATABASE_NAME}'")
-
-run_command("sudo apt install php libapache2-mod-php php-mysql php-cli php-curl php-gd php-mbstring php-xml php-xmlrpc -y")
-
-run_command(f'sudo wget https://wordpress.org/{WP_URL}')
-
-run_command(f'sudo tar -xvf {WP_URL}')
-run_command(f'rm {WP_URL}')
-run_command('sudo rm -drf /var/www/html/*')
-run_command('sudo cp -r wordpress/* /var/www/html/')
-run_command('sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php')
-caminho = '/var/www/html/wp-config.php'
-
-run_command(f"sudo sed -i 's/database_name_here/{WP_DATABASE_NAME}/g' {caminho}")
-run_command(f"sudo sed -i 's/username_here/{WP_USER}/g' {caminho}")
-run_command(f"sudo sed -i 's/password_here/{WP_PASSWORD}/g' {caminho}")
-
-run_command('sudo chown -R www-data:www-data /var/www/html/')
-run_command('sudo chmod -R 755 /var/www/html/')
-
-run_command('curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar')
-run_command('chmod +x wp-cli.phar')
-run_command('sudo mv wp-cli.phar /usr/local/bin/wp')
-
-
-run_command(f'sudo wp core download --path=/var/www/html --force --allow-root')
-
-run_command(f'sudo wp core install --url={WP_URL_SITE} --title={WP_TITULO} --admin_user={WP_ADM_NAME} --admin_password={WP_ADM_PASSWORD} --admin_email={WP_ADM_EMAIL} --path=/var/www/html --allow-root')
-
 #Copiando aruivo .cap
 
 run_command(f"sudo cp {CAP_ARQUIVO} .")
@@ -159,14 +111,11 @@ run_command ('sudo cp -r * /var/www/html/')
 
 run_command('sudo rm /var/www/html/config.py')
 
-run_command('sudo rm -drf /var/www/html/worpress')
-
 run_command('sudo chown -R www-data:www-data /var/www/html/')
 
 run_command('sudo chmod -R 755 /var/www/html/')
 
 run_command('sudo systemctl enable apache2')
-
 
 run_command('sudo systemctl restart apache2')
 

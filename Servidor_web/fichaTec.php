@@ -1,11 +1,4 @@
-<?php 
-    
 
-    
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,7 +32,7 @@
     
             $id = $_GET['id'];
         
-            $consulta = "SELECT * FROM Pecas WHERE id = $id";
+            $consulta = "SELECT * FROM ficha WHERE id = $id";
         
             $resultado = mysqli_query($db_connection, $consulta);
         
@@ -47,15 +40,8 @@
             if (mysqli_num_rows($resultado) > 0) {
                 // Exibe os dados
                 while ($linha = mysqli_fetch_assoc($resultado)) {
-                    echo("<div class='produto'>");
-                    echo("<h3>" . $linha['nome'] . " </h3>");
-                    echo "<img src='" . $linha['imagem'] . "' alt='" . $linha['nome'] . "' style='width: 200px; height: auto; margin: 0 auto;'>";
-                    echo("<p>" . $linha['descricao'] . "</p>");
-                    echo("<a href='" . $linha['ficha'] . "'class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>Ficha tecnica</a>");
                     
-                    echo("</div>");
-                    
-                    // Adicione aqui os outros campos que deseja exibir
+                   $f = $linha['caminho'];
                 }
             } else {
                 echo "Nenhuma peça encontrada.";

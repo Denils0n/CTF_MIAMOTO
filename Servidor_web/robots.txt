@@ -3,4 +3,5 @@ User-agent: *
 Disallow: /captura.cap
 Disallow: /adm.php
 Disallow: /password.zip
+Disallow: /arquivos
 

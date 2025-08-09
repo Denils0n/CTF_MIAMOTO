@@ -18,7 +18,7 @@
 
                 if ($_POST["usuario"] == $usuario_correto && $_POST["senha"] == $senha_correta) {
                     // Se o nome de usuário e senha estiverem corretos, exiba as informações da rede
-                    exibirInformacoesRede();
+                    pagina_adm();
                 } else {
                     // Se o nome de usuário ou senha estiverem incorretos, exiba uma mensagem de erro
                     echo '<h1>Erro de Autenticação</h1>';
@@ -45,20 +45,8 @@
             }
 
             // Função para exibir as informações da rede
-            function exibirInformacoesRede() {
-                echo '
-                <h1>Configuração de Wi-Fi</h1>
-                <div class="info">
-                    <p><strong>Nome da Rede:</strong> MinhaRedeWi-Fi</p>
-                    <p><strong>SSID:</strong> minha_rede_wifi</p>
-                    <p><strong>Senha:</strong> *********</p>
-                    <p><strong>Segurança:</strong> WPA2-PSK</p>
-                    <p><strong>Canal:</strong> 6</p>
-                    <p><strong>Endereço IP:</strong> 192.168.1.1</p>
-                    <p><strong>Máscara de Sub-Rede:</strong> 255.255.255.0</p>
-                    <p><strong>Gateway Padrão:</strong> 192.168.1.254</p>
-                </div>
-                ';
+            function pagina_adm() {
+                header("Location: config_site.php");
             }
             ?>
         </div>

@@ -1,6 +1,6 @@
 User-agent: *
 
 Disallow: /captura.cap
-Disallow: /admrede.php
+Disallow: /adm.php
 Disallow: /password.zip
 
